@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG Color Change</title>
+
+    <style>
+        .content 
+        {
+            text-align: center;
+        }
+
+        body
+        {
+            background-color: rgb(218, 235, 229);
+        }
+
+        button
+        {
+            margin-top:20%;
+            border-radius: 15px;    
+            border-color: rgb(22, 22, 21);
+            padding: 15px 32px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">   
+        <button id="btn"><b>Change Color</b></button>
+    </div>
+
+    <script>
+    
+    let btn = document.getElementById('btn');
+    let color;
+    btn.addEventListener('click',
+    onclick=()=>
+    {
+        let r = Math.floor(Math.random()*257)
+        let g = Math.floor(Math.random()*257)
+        let b = Math.floor(Math.random()*257)
+        let color = `rgb(${r},${g},${b})`
+        document.body.style.backgroundColor = color;
+    });
+    
+    </script>
+</body>
+</html>
